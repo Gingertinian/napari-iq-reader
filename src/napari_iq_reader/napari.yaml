@@ -1,0 +1,11 @@
+name: napari-iq-reader
+display_name: I/Q Spectrogram Reader
+contributions:
+  commands:
+    - id: napari-iq-reader.read
+      title: Read a bounded I/Q spectrogram descriptor
+      python_name: napari_iq_reader:get_reader
+  readers:
+    - command: napari-iq-reader.read
+      filename_patterns: ['*.iq.json']
+      accepts_directories: false

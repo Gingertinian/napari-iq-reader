@@ -1,0 +1,8 @@
+{
+  "dataset": "../../rf-ocusync-classifier/signal_04.iq",
+  "format": "cf32",
+  "sample_rate_hz": 100000000,
+  "center_frequency_hz": 5745000000,
+  "sample_rate_basis": "DRFF-R2 MAT record RF0 sampling rate from source provenance, not independently measured",
+  "max_samples": 262144
+}

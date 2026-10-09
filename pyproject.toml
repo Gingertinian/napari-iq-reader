@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "napari-iq-reader"
+version = "0.1.0"
+description = "Bounded numerical I/Q spectrogram reader for napari"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Jeronimo Munoz Larreta"}]
+dependencies = ["numpy>=1.26"]
+classifiers = ["Framework :: napari"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "npe2>=0.7"]
+viewer = ["napari[pyqt6]>=0.6.6,<0.8"]
+
+[project.entry-points."napari.manifest"]
+napari-iq-reader = "napari_iq_reader:napari.yaml"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+napari_iq_reader = ["napari.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["viewer: requires an offscreen Qt napari Viewer", "fixture: uses the public sibling repository"]

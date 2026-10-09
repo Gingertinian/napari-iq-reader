@@ -1,0 +1,10 @@
+.venv/
+.runtime/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+verification.json
+.env
+.env.*

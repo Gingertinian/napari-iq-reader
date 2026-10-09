@@ -1,0 +1,24 @@
+Verified 9 October 2026
+
+Python 3.13.15, NumPy 2.5.3, napari 0.7.1, npe2 0.9.0, PyQt6 6.11.0.
+41 tests passed. Two Viewer tests skipped because offscreen Qt could not
+create OpenGL in this Windows environment. Native Viewer.open, interactive
+rendering and screenshots remain unverified.
+
+Verified separately: numerical reader output, installed npe2 dispatch,
+actual napari Image units and data_to_world transforms, signed generated
+tone frequencies, time offsets, amplitude levels, malformed descriptors,
+finite values and bounded input/transform allocation.
+
+The four public recordings each produce a finite float32 array of shape
+1024 x 511. Each plugin read selects 262144 complex samples, or 2097152
+payload bytes. The 32 MiB transform guard is an allocation estimate, not
+a measured process peak-memory value.
+
+The generated tone test identifies +1024 and -768 Hz, with amplitudes
+corresponding to -6.02060 and -12.04120 dB. Recordings are public excerpts
+with acquisition qualifications in PROVENANCE.md, not new SDR captures.
+
+Run tools/verify.ps1 on Windows or tools/verify.py in the installed
+environment to generate the detailed local verification.json. Fixture
+tests are optional when the sibling data repository is absent.

@@ -1,0 +1,7 @@
+{
+  "dataset": "../../rf-ocusync-classifier/signal_01.iq",
+  "format": "cf32",
+  "sample_rate_hz": 100000000,
+  "sample_rate_basis": "Adopted corpus profile and adjacent pack1.xml; not capture-specific evidence for pack2",
+  "max_samples": 262144
+}
