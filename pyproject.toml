@@ -14,7 +14,7 @@ classifiers = ["Framework :: napari"]
 
 [project.optional-dependencies]
 test = ["pytest>=8", "npe2>=0.7"]
-viewer = ["napari[pyqt6]>=0.6.6,<0.8"]
+viewer = ["napari[pyqt6]>=0.9.2,<0.10"]
 
 [project.entry-points."napari.manifest"]
 napari-iq-reader = "napari_iq_reader:napari.yaml"
